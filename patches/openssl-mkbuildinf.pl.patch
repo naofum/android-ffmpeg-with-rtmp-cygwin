@@ -1,0 +1,10 @@
+--- mkbuildinf.pl.org	2016-03-01 22:35:05.000000000 +0900
++++ mkbuildinf.pl	2016-04-23 23:32:30.703986900 +0900
+@@ -17,6 +17,7 @@
+ END_OUTPUT
+ my $ctr = 0;
+ foreach my $c (split //, $cflags) {
++    $c =~ s|([\\'])|\\$1|;
+     # Max 18 characters per line
+     if  (($ctr++ % 18) == 0) {
+         if ($ctr != 1) {

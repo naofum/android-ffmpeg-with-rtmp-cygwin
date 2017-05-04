@@ -1,0 +1,11 @@
+--- Makefile.patch.org	2016-04-23 23:40:12.181077400 +0900
++++ Makefile	2016-04-24 23:32:28.151318100 +0900
+@@ -11,7 +11,7 @@
+ SHLIB_VERSION_HISTORY=
+ SHLIB_MAJOR=1
+ SHLIB_MINOR=0.0
+-SHLIB_EXT=.so.$(SHLIB_MAJOR).$(SHLIB_MINOR)
++SHLIB_EXT=.so
+ PLATFORM=android-armv7
+ OPTIONS=enable-shared --openssldir=. no-comp no-ec_nistp_64_gcc_128 no-engine no-gmp no-hw no-jpake no-krb5 no-md2 no-rc5 no-rfc3779 no-sctp no-ssl2 no-ssl3 no-store no-unit-test no-weak-ssl-ciphers no-zlib no-zlib-dynamic no-static-engine
+ CONFIGURE_ARGS=android-armv7 shared -no-ssl2 -no-ssl3 -no-comp -no-hw -no-engine --openssldir=.

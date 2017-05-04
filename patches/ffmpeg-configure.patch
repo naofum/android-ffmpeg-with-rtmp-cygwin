@@ -1,0 +1,25 @@
+--- configure.orig	2017-04-13 10:55:54.000000000 +0900
++++ configure	2017-04-19 22:34:39.701250300 +0900
+@@ -3302,10 +3302,10 @@
+ SLIBSUF=".so"
+ SLIBNAME='$(SLIBPREF)$(FULLNAME)$(SLIBSUF)'
+ SLIBNAME_WITH_VERSION='$(SLIBNAME).$(LIBVERSION)'
+-SLIBNAME_WITH_MAJOR='$(SLIBNAME).$(LIBMAJOR)'
++SLIBNAME_WITH_MAJOR='$(SLIBPREF)$(FULLNAME)-$(LIBMAJOR)$(SLIBSUF)'
+ LIB_INSTALL_EXTRA_CMD='$$(RANLIB) "$(LIBDIR)/$(LIBNAME)"'
+-SLIB_INSTALL_NAME='$(SLIBNAME_WITH_VERSION)'
+-SLIB_INSTALL_LINKS='$(SLIBNAME_WITH_MAJOR) $(SLIBNAME)'
++SLIB_INSTALL_NAME='$(SLIBNAME_WITH_MAJOR)'
++SLIB_INSTALL_LINKS='$(SLIBNAME)'
+ VERSION_SCRIPT_POSTPROCESS_CMD="cat"
+ 
+ asflags_filter=echo
+@@ -5795,7 +5795,7 @@
+ enabled libkvazaar        && require_pkg_config "kvazaar >= 0.8.1" kvazaar.h kvz_api_get
+ enabled libmfx            && require_pkg_config libmfx "mfx/mfxvideo.h" MFXInit
+ enabled libmodplug        && require_pkg_config libmodplug libmodplug/modplug.h ModPlug_Load
+-enabled libmp3lame        && require "libmp3lame >= 3.98.3" lame/lame.h lame_set_VBR_quality -lmp3lame
++#enabled libmp3lame        && require "libmp3lame >= 3.98.3" lame/lame.h lame_set_VBR_quality -lmp3lame
+ enabled libnut            && require libnut libnut.h nut_demuxer_init -lnut
+ enabled libnpp            && require libnpp npp.h nppGetLibVersion -lnppi -lnppc
+ enabled libopencore_amrnb && require libopencore_amrnb opencore-amrnb/interf_dec.h Decoder_Interface_init -lopencore-amrnb

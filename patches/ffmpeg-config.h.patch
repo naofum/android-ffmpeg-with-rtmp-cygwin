@@ -1,0 +1,13 @@
+--- config.h.org	2015-02-07 19:31:35.000000000 +0900
++++ config.h	2015-02-07 19:50:04.000000000 +0900
+@@ -221,8 +221,8 @@
+ #define HAVE_LDEXPF 1
+ #define HAVE_LLRINT 1
+ #define HAVE_LLRINTF 1
+-#define HAVE_LOG2 1
+-#define HAVE_LOG2F 1
++#define HAVE_LOG2 0
++#define HAVE_LOG2F 0
+ #define HAVE_LOG10F 1
+ #define HAVE_LRINT 1
+ #define HAVE_LRINTF 1
